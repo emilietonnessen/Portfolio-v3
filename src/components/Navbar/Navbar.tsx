@@ -6,18 +6,18 @@ import { useState } from 'react';
 import images from '../../constants/images';
 import './Navbar.scss';
 
+export const menuItems = [
+  'home',
+  'portfolio',
+  'skills',
+  'certificates',
+  'about',
+  'testimonials',
+  'contact',
+];
+
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-
-  const menuItems = [
-    'home',
-    'portfolio',
-    'skills',
-    'certificates',
-    'about',
-    'testimonials',
-    'contact',
-  ];
 
   return (
     <nav className="app__navbar">

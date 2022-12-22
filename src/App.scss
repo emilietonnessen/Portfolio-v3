@@ -7,12 +7,12 @@
 }
 
 /* Copy/Paste styles */
-.app__whitebg {
-  background-color: var(--white-color);
+.app__primarybg {
+  background-color: var(--grey-background-color);
 }
 
-.app__primarybg {
-  background-color: var(--primary-color);
+.app__darkbg {
+  background-color: var(--dark-background-color);
 }
 
 .app__container {
@@ -59,11 +59,11 @@
   font-size: 2.75rem;
   font-weight: 800;
   text-align: center;
-  color: var(--black-color);
+  color: var(--white-color);
   text-transform: capitalize;
 
   span {
-    color: var(--secondary-color);
+    color: var(--primary-color);
   }
 
   @media screen and (min-width: 2000px) {
@@ -89,7 +89,7 @@
 .bold-text {
   font-size: 1rem;
   font-weight: 800;
-  color: var(--black-color);
+  color: var(--white-color);
   text-align: left;
 
   @media screen and (min-width: 2000px) {
@@ -98,57 +98,6 @@
 
   @media screen and (max-width: 450px) {
     font-size: 0.9rem;
-  }
-}
-
-.app__social {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-
-  padding: 1rem;
-
-  div {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--white-color);
-    margin: 0.25rem 0;
-    border: 1px solid var(--lightGray-color);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    transition: all 0.3s ease-in-out;
-
-    svg {
-      width: 15px;
-      height: 15px;
-      color: var(--gray-color);
-    }
-
-    &:hover {
-      background-color: var(--secondary-color);
-      border-color: var(--secondary-color);
-
-      svg {
-        color: var(--white-color);
-      }
-    }
-
-    @media screen and (min-width: 2000px) {
-      width: 70px;
-      height: 70px;
-
-      margin: 0.5rem 0;
-
-      svg {
-        width: 30px;
-        height: 30px;
-      }
-    }
   }
 }
 
@@ -164,13 +113,13 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #cbcbcb;
+    background-color: var(--white-color);
     margin: 0.5rem;
 
     transition: background-color 0.2s ease-in-out;
 
     &:hover {
-      background-color: var(--secondary-color);
+      background-color: var(--primary-color);
     }
 
     @media screen and (min-width: 2000px) {
