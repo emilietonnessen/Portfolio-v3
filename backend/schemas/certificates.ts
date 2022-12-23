@@ -3,16 +3,19 @@ export default {
   title: 'Certificates',
   type: 'document',
   fields: [
-    {name: 'name', title: 'name', type: 'string'},
+    {name: 'title', title: 'Title', type: 'string'},
     {
-      name: 'company',
-      title: 'Company',
+      name: 'description',
+      title: 'Description',
       type: 'string',
     },
     {
-      name: 'desc',
-      title: 'Desc',
-      type: 'string',
+      name: 'imgUrl',
+      title: 'Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
     },
   ],
 }

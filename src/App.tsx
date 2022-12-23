@@ -1,6 +1,6 @@
 import './App.scss';
 import Navbar from './components/Navbar/Navbar';
-import Courses from './container/Courses/Courses';
+import Courses from './container/Certificates/Certificates';
 import Header from './container/Header/Header';
 import Portfolio from './container/Portfolio/Portfolio';
 import SkillsAndExperience from './container/SkillsAndExperience/SkillsAndExperience';
@@ -14,7 +14,6 @@ function App() {
       <SkillsAndExperience />
       <Courses />
 
-      {/* Testimonials */}
       {/* About 
       
       What am I looking for? 
@@ -28,6 +27,8 @@ function App() {
       
       
       */}
+
+      {/* Testimonials */}
     </div>
   );
 }
