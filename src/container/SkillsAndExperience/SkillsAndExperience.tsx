@@ -1,109 +1,109 @@
 import { Fragment, useEffect, useState } from 'react';
-import { client, urlFor } from '../../client';
+import { IoMdArrowDropright } from 'react-icons/io';
+import { motion } from 'framer-motion';
+
+import './SkillsAndExperience.scss';
 import AppWrap from '../../wrapper/AppWrap';
 import MotionWrap from '../../wrapper/MotionWrap';
-import './SkillsAndExperience.scss';
-import { motion } from 'framer-motion';
-interface WorksProps {
-  name: string;
-  company: string;
-  desc: string;
-}
+import { client, urlFor } from '../../client';
 
 interface ExperienceProps {
-  works: WorksProps[];
-  year: string;
+  description: string;
+  employer: string;
+  index: string;
+  jobPosition: string;
+  list: string[];
+  timePeriod: string;
 }
 
 interface SkillProps {
-  name: string;
   bgColor: string;
   icon: any;
+  name: string;
 }
 
 const SkillsAndExperience = () => {
   const [experiences, setExperiences] = useState<ExperienceProps[]>([]);
   const [skills, setSkills] = useState<SkillProps[]>([]);
 
+  // Fetch skills and experience
   useEffect(() => {
-    const experiencesQuery = '*[_type == "experiences"]';
+    const experiencesQuery = '*[_type == "experience"]';
     const skillsQuery = '*[_type == "skills"]';
 
-    client.fetch(experiencesQuery).then((data) => {
+    client.fetch(experiencesQuery).then((data: ExperienceProps[]) => {
       setExperiences(data);
     });
 
-    client.fetch(skillsQuery).then((data) => {
+    client.fetch(skillsQuery).then((data: SkillProps[]) => {
       setSkills(data);
     });
   }, []);
 
-  console.log('[skills]', skills);
-
   return (
-    <div>
+    <>
+      {/* Section title: */}
       <h2 className="head-text">Skills & Experience</h2>
-      <div className="app__skills-container">
-        <motion.div className="app__skills-list">
+
+      {/* Section content */}
+      <div className="skills-and-experience">
+        <div className="skills">
           {skills?.map((skill, index) => (
             <motion.div
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
-              className="app__skills-item app__flex"
+              className="skills__item"
               key={`${skill.name}-${index}`}
             >
-              <div
-                className="app__flex"
-                style={{ backgroundColor: skill.bgColor }}
-              >
+              <div style={{ backgroundColor: skill.bgColor }}>
                 <img src={urlFor(skill.icon).url()} alt={skill.name} />
               </div>
-              <p className="p-text">{skill.name}</p>
+              <p className="skills__text">{skill.name}</p>
             </motion.div>
           ))}
-        </motion.div>
-        <motion.div className="app__skills-exp">
-          {experiences
-            .sort((a, b) => Number(b.year) - Number(a.year))
-            ?.map((experience, index) => (
-              <motion.div
-                className="app__skills-exp-item"
-                key={`${experience.year}-${index}`}
-              >
-                <div className="app__skills-exp-year">
-                  <p className="bold-text">{experience.year}</p>
-                </div>
+        </div>
 
-                <motion.div className="app__skills-exp-works">
-                  {experience.works?.map((work, index) => (
-                    <Fragment key={`${work.name}-${index}`}>
-                      <motion.div
-                        whileInView={{ opacity: [0, 1] }}
-                        transition={{ duration: 0.5 }}
-                        className="app__skills-exp-work"
-                        data-tip
-                        //data-for={work.name}
-                        id={`${work.company}-${index}`}
-                      >
-                        <h4 className="bold-text">{work.name}</h4>
-                        <p className="p-text">{work.company}</p>
-                      </motion.div>
-                      {/*  <Tooltip
-                        anchorId={`${work.company}-${index}`}
-                        // effect="solid"
-                        // arrowColor="#FFF"
-                        className="skills-tooltip"
-                        content={work.desc}
-                        place="top"
-                      /> */}
-                    </Fragment>
-                  ))}
-                </motion.div>
-              </motion.div>
+        <motion.div
+          whileInView={{ opacity: [0, 1] }}
+          transition={{ duration: 0.5 }}
+          className="app__skills-exp experience__list"
+        >
+          {experiences
+            .sort((a, b) => Number(a.index) - Number(b.index))
+            ?.map((experience, index) => (
+              <div key={index} className="experience__list-item">
+                <h3 className="experience__job-position">
+                  {experience.jobPosition}{' '}
+                  <span className="experience__employer">
+                    @{experience.employer}
+                  </span>
+                </h3>
+                <p className="experience__time-period">
+                  {experience.timePeriod}
+                </p>
+                <ul className="experience__desc-list">
+                  <li className="experience__desc-list-item">
+                    <IoMdArrowDropright />
+                    <span className="experience__description">
+                      {experience.description}
+                    </span>
+                  </li>
+                  <li className="experience__desc-list-item">
+                    <IoMdArrowDropright />
+                    <div className="experience__tags">
+                      {experience.list?.map((li, index) => (
+                        <span key={li} className="">
+                          {li}
+                        </span>
+                      ))}
+                    </div>
+                  </li>
+                </ul>
+              </div>
             ))}
         </motion.div>
       </div>
-    </div>
+    </>
   );
 };
 

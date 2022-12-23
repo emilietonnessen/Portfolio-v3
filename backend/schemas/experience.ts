@@ -3,16 +3,42 @@ export default {
   title: 'Experience',
   type: 'document',
   fields: [
-    {name: 'name', title: 'name', type: 'string'},
     {
-      name: 'company',
-      title: 'Company',
+      name: 'jobPosition',
+      title: 'Job Position',
       type: 'string',
     },
     {
-      name: 'desc',
-      title: 'Desc',
+      name: 'employer',
+      title: 'Employer',
       type: 'string',
+    },
+    {
+      name: 'timePeriod',
+      title: 'Time Period',
+      type: 'string',
+    },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'string',
+    },
+    {
+      name: 'index',
+      title: 'Index',
+      type: 'number',
+    },
+    {
+      name: 'list',
+      title: 'List',
+      type: 'array',
+      of: [
+        {
+          name: 'list-item',
+          title: 'List item',
+          type: 'string',
+        },
+      ],
     },
   ],
 }
