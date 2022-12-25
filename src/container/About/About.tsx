@@ -13,7 +13,7 @@ const About = () => {
       <h2 className="head-text">About me</h2>
       <div className="about__gallery">
         {galleryImages.map((image, index) => (
-          <div>
+          <div key={index}>
             <motion.img
               whileHover={{ scale: [1, 1.1] }}
               transition={{ duration: 0.3 }}
