@@ -1,9 +1,12 @@
 import './App.scss';
-import Navbar from './components/Navbar/Navbar';
+import About from './container/About/About';
+import Contact from './container/Contact/Contact';
 import Courses from './container/Certificates/Certificates';
 import Header from './container/Header/Header';
+import Navbar from './components/Navbar/Navbar';
 import Portfolio from './container/Portfolio/Portfolio';
 import SkillsAndExperience from './container/SkillsAndExperience/SkillsAndExperience';
+import Testimonials from './container/Testimonials/Testimonials';
 
 function App() {
   return (
@@ -13,22 +16,9 @@ function App() {
       <Portfolio />
       <SkillsAndExperience />
       <Courses />
-
-      {/* About 
-      
-      What am I looking for? 
-      - Self development 
-          - senior/mentor frontend developer
-          - courses
-          - events
-      - team building exercises    
-      - paid well
-      - 
-      
-      
-      */}
-
-      {/* Testimonials */}
+      <About />
+      <Testimonials />
+      <Contact />
     </div>
   );
 }

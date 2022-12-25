@@ -3,10 +3,14 @@ export default {
   title: 'Certificates',
   type: 'document',
   fields: [
-    {name: 'title', title: 'Title', type: 'string'},
     {
-      name: 'description',
-      title: 'Description',
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+    },
+    {
+      name: 'link',
+      title: 'Link',
       type: 'string',
     },
     {
