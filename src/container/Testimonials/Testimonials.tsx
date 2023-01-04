@@ -35,6 +35,7 @@ const Testimonials = () => {
   console.log('[testimonials]', testimonials);
   return (
     <div className="testimonials">
+      <h2 className="head-text">Testimonials</h2>
       {testimonials?.length && (
         <>
           <div className="app__testimonial-item app__flex">
