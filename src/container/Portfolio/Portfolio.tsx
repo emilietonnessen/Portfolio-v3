@@ -2,23 +2,27 @@ import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-import './Projects.scss';
+import './Portfolio.scss';
 import AppWrap from '../../wrapper/AppWrap';
 import MotionWrap from '../../wrapper/MotionWrap';
 import { client, urlFor } from '../../client';
 
-const Projects = () => {
+const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState<any>({ y: 0, opacity: 1 });
   const [projects, setProjects] = useState<any[]>([]);
   const [filterProjects, setFilterProjects] = useState<any[]>([]);
 
   const tags = [
-    'React JS',
-    'Next JS',
-    'TypeScript',
+    'HTML',
     'Sass',
+    'JavaScript',
     'Web Design',
+    'Logo Design',
+    'React JS',
+    'TypeScript',
+    'Sanity',
+    'Framer Motion',
     'All',
   ];
 
@@ -54,13 +58,13 @@ const Projects = () => {
         My Creative <span>Portfolio</span> section
       </h2>
 
-      <div className="app__work-filter">
+      <div className="portfolio__tags-container">
         {tags.map((item, index) => (
           <div
             key={index}
             onClick={() => handleProjectFilter(item)}
-            className={`app__work-filter-item app__flex p-text ${
-              activeFilter === item ? 'item-active' : ''
+            className={`portfolio__tags-item ${
+              activeFilter === item ? 'portfolio__tags-item--active' : ''
             }`}
           >
             {item}
@@ -71,11 +75,11 @@ const Projects = () => {
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__work-portfolio"
+        className="portfolio__projects"
       >
         {filterProjects.map((work, index) => (
-          <div className="app__work-item app__flex" key={index}>
-            <div className="app__work-img app__flex">
+          <div className="portfolio__card-item app__flex" key={index}>
+            <div className="portfolio__card-image app__flex">
               <img src={urlFor(work?.imgUrl).url()} alt={work?.title} />
 
               <motion.div
@@ -85,7 +89,7 @@ const Projects = () => {
                   ease: 'easeInOut',
                   staggerChildren: 0.5,
                 }}
-                className="app__work-hover app__flex"
+                className="portfolio__card-image--hover app__flex"
               >
                 <a href={work.projectLink} target="_blank" rel="noreferrer">
                   <motion.div
@@ -110,13 +114,11 @@ const Projects = () => {
               </motion.div>
             </div>
 
-            <div className="app__work-content app__flex">
+            <div className="portfolio__card-content app__flex">
               <h4 className="bold-text">{work.title}</h4>
-              <p className="p-text" style={{ marginTop: 10 }}>
-                {work.description}
-              </p>
+              <p style={{ marginTop: 10 }}>{work.description}</p>
 
-              <div className="app__work-tag app__flex">
+              <div className="portfolio__card-tag app__flex">
                 <p className="p-text">{work.tags[0]}</p>
               </div>
             </div>
@@ -128,7 +130,7 @@ const Projects = () => {
 };
 
 export default AppWrap(
-  MotionWrap(Projects, 'app__works'),
+  MotionWrap(Portfolio, 'portfolio'),
   'portfolio',
   'app__darkbg'
 );

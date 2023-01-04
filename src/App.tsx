@@ -17,7 +17,7 @@ function App() {
       <SkillsAndExperience />
       <Courses />
       <About />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact />
     </div>
   );

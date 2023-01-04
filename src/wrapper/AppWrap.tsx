@@ -15,8 +15,8 @@ const AppWrap = (
           <Component />
 
           <div className="copyright">
-            <p className="p-text">@{currentYear} Emilie Tønnessen</p>
-            <p className="p-text">All rights reserved</p>
+            <p>@{currentYear} Emilie Tønnessen.</p>
+            <p>All rights reserved.</p>
           </div>
         </div>
         <NavigationDots active={idName} />

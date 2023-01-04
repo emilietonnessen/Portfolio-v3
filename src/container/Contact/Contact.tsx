@@ -8,14 +8,14 @@ import MotionWrap from '../../wrapper/MotionWrap';
 const Contact = () => {
   return (
     <div className="contact__container">
-      <h2 className="head-text">Contact me</h2>
+      <h2 className="head-text">Get in touch</h2>
 
       <div className="contact__card-wrap">
         {/* Email */}
         <motion.a
           whileHover={{
             scale: [1, 1.05],
-            boxShadow: '0 0 25px rgba(255, 255, 255, 0.15)',
+            boxShadow: '0 0 25px rgba(0, 0, 0, 0.25)',
           }}
           transition={{ duration: 0.5 }}
           href="emailto: emilie@tonnessen.com"
@@ -29,7 +29,7 @@ const Contact = () => {
         <motion.a
           whileHover={{
             scale: [1, 1.05],
-            boxShadow: '0 0 25px rgba(255, 255, 255, 0.15)',
+            boxShadow: '0 0 25px rgba(0, 0, 0, 0.25)',
           }}
           transition={{ duration: 0.5 }}
           href="https://www.linkedin.com/in/emilie-t%C3%B8nnessen-19a850191/"
@@ -43,7 +43,7 @@ const Contact = () => {
         <motion.a
           whileHover={{
             scale: [1, 1.05],
-            boxShadow: '0 0 25px rgba(255, 255, 255, 0.15)',
+            boxShadow: '0 0 25px rgba(0, 0, 0, 0.25)',
           }}
           transition={{ duration: 0.5 }}
           href="https://github.com/emilietonnessen"
@@ -60,5 +60,5 @@ const Contact = () => {
 export default AppWrap(
   MotionWrap(Contact, 'contact'),
   'contact',
-  'app__primarybg'
+  'app__darkbg'
 );

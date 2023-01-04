@@ -29,7 +29,11 @@ const Header = () => {
           <a className="button button__primary" href="#portfolio">
             View my Portfolio
           </a>
-          <a href={images.resume} download className="button button__secondary">
+          <a
+            href={images.englishResume}
+            download
+            className="button button__secondary"
+          >
             Download Resume
           </a>
         </div>

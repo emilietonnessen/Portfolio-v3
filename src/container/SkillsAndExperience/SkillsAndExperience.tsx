@@ -43,7 +43,7 @@ const SkillsAndExperience = () => {
   return (
     <>
       {/* Section title: */}
-      <h2 className="head-text">Skills & Experience</h2>
+      <h2 className="head-text"> Skills & Experience</h2>
 
       {/* Section content */}
       <div className="skills-and-experience">

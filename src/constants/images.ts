@@ -1,7 +1,8 @@
 import header from '../assets/header.jpg';
 import bgWhite from '../assets/bgWhite.png';
 import logo from '../assets/logo.png';
-import resume from '../assets/resume.pdf';
+import englishResume from '../assets/english-resume.pdf';
+import norwegianResume from '../assets/norwegian-resume.pdf';
 
 import emilie1 from '../assets/emilie-1.jpg';
 import emilie2 from '../assets/emilie-2.jpg';
@@ -11,7 +12,8 @@ const images = {
   header,
   bgWhite,
   logo,
-  resume,
+  englishResume,
+  norwegianResume,
   emilie1,
   emilie2,
   emilie3,

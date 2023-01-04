@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
 :root {
   --font-base: 'Roboto', sans-serif;
@@ -8,11 +8,11 @@
   --grey-background-color: #393c45;
   --dark-background-color: #212430;
   --white-color: #fff;
-  --dark-text-color: #33394a;
+  --dark-text-color: #1c1f27;
   --black-color: #000;
   --card-background-color: #33394a;
 }
-
+/* #1c1f27 */
 * {
   box-sizing: border-box;
   padding: 0;

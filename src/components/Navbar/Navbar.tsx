@@ -12,7 +12,7 @@ export const menuItems = [
   'skills',
   'certificates',
   'about',
-  'testimonials',
+  // 'testimonials',
   'contact',
 ];
 
@@ -26,7 +26,7 @@ const Navbar = () => {
       </div>
       <ul className="app__navbar-links">
         {menuItems.map((item) => (
-          <li key={`link-${item}`} className="app__flex p-text">
+          <li key={`link-${item}`} className="app__flex">
             <a href={`#${item}`}>{item}</a>
           </li>
         ))}
