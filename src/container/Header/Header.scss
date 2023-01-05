@@ -46,5 +46,7 @@
   &__button-group {
     display: flex;
     gap: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 }

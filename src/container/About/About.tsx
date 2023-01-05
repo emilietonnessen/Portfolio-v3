@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 import './About.scss';
 import AppWrap from '../../wrapper/AppWrap';
 import MotionWrap from '../../wrapper/MotionWrap';
@@ -52,14 +50,14 @@ const About = () => {
             download
             className="button button__primary"
           >
-            Download English Resume
+            English Resume
           </a>
           <a
             href={images.englishResume}
             download
             className="button button__secondary"
           >
-            Download Norwegian Resume
+            Norwegian Resume
           </a>
         </div>
       </div>
