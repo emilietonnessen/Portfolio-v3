@@ -53,7 +53,7 @@ const About = () => {
             English Resume
           </a>
           <a
-            href={images.englishResume}
+            href={images.norwegianResume}
             download
             className="button button__secondary"
           >
