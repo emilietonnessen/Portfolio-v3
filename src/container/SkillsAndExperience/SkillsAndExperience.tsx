@@ -56,7 +56,11 @@ const SkillsAndExperience = () => {
               key={`${skill.name}-${index}`}
             >
               <div style={{ backgroundColor: skill.bgColor }}>
-                <img src={urlFor(skill.icon).url()} alt={skill.name} />
+                <img
+                  src={urlFor(skill.icon).url()}
+                  alt=""
+                  role="presentation"
+                />
               </div>
               <p className="skills__text">{skill.name}</p>
             </motion.div>

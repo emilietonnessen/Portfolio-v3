@@ -49,6 +49,7 @@ const About = () => {
             href={images.englishResume}
             download
             className="button button__primary"
+            title="Download PDF"
           >
             English Resume
           </a>
@@ -56,6 +57,7 @@ const About = () => {
             href={images.norwegianResume}
             download
             className="button button__secondary"
+            title="Download PDF"
           >
             Norwegian Resume
           </a>

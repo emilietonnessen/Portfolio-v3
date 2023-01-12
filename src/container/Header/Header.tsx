@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-import Button from '../../components/Button/Button';
-import DownloadButton from '../../components/Button/DownloadButton';
 import images from '../../constants/images';
 import AppWrap from '../../wrapper/AppWrap';
 import './Header.scss';
@@ -33,6 +31,7 @@ const Header = () => {
             href={images.englishResume}
             download
             className="button button__secondary"
+            title="Download english PDF resume"
           >
             Download Resume
           </a>

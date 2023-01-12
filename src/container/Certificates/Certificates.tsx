@@ -40,10 +40,12 @@ const Certificates = () => {
               href={certificate.link}
               target="_blank"
               rel="noreferrer"
+              title="Open link to course, new window"
             >
               <img
                 src={urlFor(certificate.imgUrl).url()}
-                alt={certificate.title}
+                alt=""
+                role="presentation"
               />
               <h3 className="certificates__card-title">{certificate.title}</h3>
             </a>

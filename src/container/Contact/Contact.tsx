@@ -18,8 +18,9 @@ const Contact = () => {
             boxShadow: '0 0 25px rgba(0, 0, 0, 0.25)',
           }}
           transition={{ duration: 0.5 }}
-          href="emailto: emilie@tonnessen.com"
+          href="mailto:emilie@tonnessen.com"
           className="contact__card"
+          title="Open email application"
         >
           <BsFillEnvelopeFill />
           emilie@tonnessen.com
@@ -34,6 +35,9 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           href="https://www.linkedin.com/in/emilie-t%C3%B8nnessen-19a850191/"
           className="contact__card"
+          target="_blank"
+          rel="noreferrer"
+          title="Open Linkedin profile, new window"
         >
           <BsLinkedin />
           Linkedin Profile
@@ -48,6 +52,9 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           href="https://github.com/emilietonnessen"
           className="contact__card"
+          target="_blank"
+          rel="noreferrer"
+          title="Open Linkedin profile, new window"
         >
           <BsGithub />
           GitHub Profile
