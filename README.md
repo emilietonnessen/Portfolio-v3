@@ -16,6 +16,7 @@ This is my portfolio, made to showcase my work, personality and talents.
   - Design and apply focus styling as the default is different on each operating system and browser so I can't rely on that working with my color palette.
   - Go over all images and make sure all alt texts are up to date
   - Check color contrast
+  - Add styling for all these states: hover, active, focus and visited
 
 ## Credits
 
