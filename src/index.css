@@ -3,6 +3,8 @@
 :root {
   --font-base: 'Roboto', sans-serif;
 
+  --error-background-color: #6b2222;
+  --error-text: #ffc7c7;
   --primary-color: #0097fe;
   --secondary-color: #0454a0;
   --grey-background-color: #393c45;
@@ -12,7 +14,7 @@
   --black-color: #000;
   --card-background-color: #33394a;
 }
-/* #1c1f27 */
+
 * {
   box-sizing: border-box;
   padding: 0;
