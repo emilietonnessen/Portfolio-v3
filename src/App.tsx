@@ -6,7 +6,7 @@ import Header from './container/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Portfolio from './container/Portfolio/Portfolio';
 import SkillsAndExperience from './container/SkillsAndExperience/SkillsAndExperience';
-import Testimonials from './container/Testimonials/Testimonials';
+// import Testimonials from './container/Testimonials/Testimonials';
 
 function App() {
   return (
