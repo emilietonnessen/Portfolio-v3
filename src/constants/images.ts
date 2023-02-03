@@ -1,7 +1,7 @@
-import header from '../assets/header.jpg';
 import bgWhite from '../assets/bgWhite.png';
-import logo from '../assets/logo.png';
 import englishResume from '../assets/english-resume.pdf';
+import header from '../assets/header.jpg';
+import logo from '../assets/logo.png';
 import norwegianResume from '../assets/norwegian-resume.pdf';
 
 import emilie1 from '../assets/emilie-1.jpg';

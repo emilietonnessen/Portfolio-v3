@@ -1,4 +1,3 @@
-import React from 'react';
 import { menuItems } from './Navbar/Navbar';
 
 const NavigationDots = ({ active }: { active: string }) => {

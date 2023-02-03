@@ -1,10 +1,10 @@
-import { HiX } from 'react-icons/hi';
 import { CgMenuRightAlt } from 'react-icons/cg';
+import { HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
-import images from '../../constants/images';
 import './Navbar.scss';
+import images from '../../constants/images';
 
 export const menuItems = [
   'home',

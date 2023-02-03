@@ -1,5 +1,6 @@
-import './ErrorBox.scss';
 import { VscError } from 'react-icons/vsc';
+
+import './ErrorBox.scss';
 
 const ErrorBox = ({ message }: { message: string }) => {
   return (
