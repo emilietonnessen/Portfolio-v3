@@ -110,7 +110,13 @@
       background-color: rgba(#212430, 0.7);
 
       border-radius: 0.5rem;
+      opacity: 0;
       transition: all 0.3s ease;
+
+      // FIXME: Make it more mobile friendly
+      @media screen and (max-width: 500px) {
+        opacity: 1;
+      }
 
       div {
         width: 50px;
@@ -136,6 +142,7 @@
 
   &__card-content {
     padding: 0.5rem;
+    padding-top: 1.5rem;
     width: 100%;
     position: relative;
     flex-direction: column;

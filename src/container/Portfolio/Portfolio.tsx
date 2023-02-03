@@ -104,7 +104,16 @@ const Portfolio = () => {
                 <div className="portfolio__card-image app__flex">
                   <img src={urlFor(work?.imgUrl).url()} alt={work?.title} />
 
-                  <div className="portfolio__card-image--hover app__flex">
+                  {/* FIXME: This is not mobile friendly as it need to be hovered which is not possible on mobile */}
+                  <motion.div
+                    whileHover={{ opacity: [0, 1] }}
+                    transition={{
+                      duration: 0.25,
+                      ease: 'easeInOut',
+                      staggerChildren: 0.5,
+                    }}
+                    className="portfolio__card-image--hover app__flex"
+                  >
                     <a href={work.projectLink} target="_blank" rel="noreferrer">
                       <motion.div
                         whileInView={{ scale: [0, 1] }}
@@ -131,7 +140,7 @@ const Portfolio = () => {
                         <AiFillGithub aria-hidden="true" />
                       </motion.div>
                     </a>
-                  </div>
+                  </motion.div>
                 </div>
 
                 <div className="portfolio__card-content app__flex">
